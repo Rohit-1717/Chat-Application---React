@@ -1,17 +1,32 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Message from "./Message";
-import { collection, query, onSnapshot, orderBy } from "firebase/firestore";
+import {
+  collection,
+  query,
+  onSnapshot,
+  orderBy,
+  limit,
+} from "firebase/firestore";
 import { db } from "../firebase";
 
 const ChatBox = () => {
+  const messagesEndRef = useRef();
   const [messages, setMessages] = useState([]);
+
+  const scrollToBottom = () => {
+    messagesEndRef.current.scrollIntoView({ behavior: "smooth" });
+  };
+
+  useEffect(scrollToBottom, [messages]);
 
   useEffect(() => {
     // Add console.log to verify the query is created
-    console.log("Setting up Firestore listener");
+    // console.log("Setting up Firestore listener");
 
     const q = query(
-      collection(db, "messages")
+      collection(db, "messages"),
+      orderBy("createdAt"),
+      limit(50)
       // Temporarily remove orderBy to eliminate potential timestamp issues
     );
 
@@ -20,11 +35,11 @@ const ChatBox = () => {
       (querySnapshot) => {
         const messagesArray = [];
         // Add console.log to see if we're getting data
-        console.log("Received snapshot:", querySnapshot.size, "documents");
+        // console.log("Received snapshot:", querySnapshot.size, "documents");
 
         querySnapshot.forEach((doc) => {
           // Log each document to see the data
-          console.log("Document data:", doc.data());
+          // console.log("Document data:", doc.data());
           messagesArray.push({
             ...doc.data(),
             id: doc.id,
@@ -32,7 +47,7 @@ const ChatBox = () => {
         });
 
         // Log the array we're about to set to state
-        console.log("Setting messages:", messagesArray);
+        // console.log("Setting messages:", messagesArray);
         setMessages(messagesArray);
       },
       (error) => {
@@ -45,7 +60,7 @@ const ChatBox = () => {
   }, []);
 
   // Add console.log to verify current state
-  console.log("Current messages in state:", messages);
+  // console.log("Current messages in state:", messages);
 
   return (
     <div className="pb-44 pt-20 containerWrap">
@@ -56,6 +71,7 @@ const ChatBox = () => {
           <Message key={message.id} message={message} />
         ))
       )}
+      <div ref={messagesEndRef}></div>
     </div>
   );
 };

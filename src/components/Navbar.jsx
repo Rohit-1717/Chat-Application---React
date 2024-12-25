@@ -1,4 +1,3 @@
-// components/Navbar.js
 import { UserAuth } from "../context/AuthContext";
 import { useNavigate } from "react-router-dom";
 
@@ -9,17 +8,17 @@ function Navbar() {
   const handleLogout = async () => {
     try {
       await logOut();
-      navigate('/');
+      navigate("/");
     } catch (error) {
       console.error(error);
     }
   };
 
   return (
-    <div className="navbar bg-base-100">
+    <div className="navbar fixed z-10 bg-base-100">
       <div className="container mx-auto">
         <div className="flex-1">
-          <a className="btn btn-ghost normal-case text-xl">Chat App</a>
+          <a className="normal-case text-xl">ChatMate</a>
         </div>
         <div className="flex-none">
           {user ? (
