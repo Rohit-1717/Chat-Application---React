@@ -1,13 +1,17 @@
-import React from "react";
+// routes/PrivateRoute.js
 import { Navigate } from "react-router-dom";
+import { UserAuth } from "../context/AuthContext";
 
 export const PrivateRoute = ({ children }) => {
-  const currentUser = false;
+  const { user, loading } = UserAuth();
 
-  if (!currentUser) {
-    return <Navigate to={"/"} replace={true} />;
+  if (loading) {
+    return <div>Loading...</div>;
   }
+
+  if (!user) {
+    return <Navigate to="/" />;
+  }
+
   return children;
 };
-
-//! npm install firebase
