@@ -44,7 +44,7 @@ const Message = ({ message }) => {
         >
           <div className="text-sm font-semibold mb-1">{message.name}</div>
           <div
-            className={`px-4 py-2 rounded-lg ${
+            className={`px-4 py-2 rounded-full ${
               isOwnMessage
                 ? "bg-primary text-white"
                 : "bg-gray-200 text-gray-800"

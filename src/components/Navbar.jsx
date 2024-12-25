@@ -18,7 +18,7 @@ function Navbar() {
     <div className="navbar fixed z-10 bg-base-100">
       <div className="container mx-auto">
         <div className="flex-1">
-          <a className="normal-case text-xl">ChatMate</a>
+          <a className="normal-case text-xl font-bold">ChatMate</a>
         </div>
         <div className="flex-none">
           {user ? (
@@ -29,7 +29,7 @@ function Navbar() {
                   alt="user avatar"
                   className="w-10 h-10 rounded-full"
                 />
-                <button onClick={handleLogout} className="btn btn-primary">
+                <button onClick={handleLogout} className="btn btn-primary ">
                   Logout
                 </button>
               </div>
