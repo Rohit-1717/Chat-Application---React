@@ -6,9 +6,18 @@ ChatMe is a simple and user-friendly chat application built using **React (Vite)
 
 ## **Technology Used**
 
-- ![React Logo](https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg) **React (Vite)**
-- ![Firebase Logo](https://upload.wikimedia.org/wikipedia/commons/3/37/Firebase_Logo.svg) **Firebase**
-- ![Google Logo](https://upload.wikimedia.org/wikipedia/commons/4/4a/Logo_2013_Google.png) **Google Authentication**
+- <div style="display: flex; align-items: center;">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" alt="React Logo" width="50" height="50" style="margin-right: 8px; margin-bottom:8px">
+    <span>**React (Vite)**</span>
+  </div>
+- <div style="display: flex; align-items: center;">
+    <img src="https://firebase.google.com/static/images/brand-guidelines/logo-vertical.png" alt="Firebase Logo" width="50" height="50" style="margin-right: 8px; margin-bottom:8px">
+    <span>**Firebase**</span>
+  </div>
+- <div style="display: flex; align-items: center;">
+    <img src="https://developers.google.com/static/identity/images/branding_guide_do_1.png" alt="Google Logo" width="50" height="50" style="margin-right: 8px;">
+    <span>**Google Authentication**</span>
+  </div>
 
 ---
 
