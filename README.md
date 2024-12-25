@@ -1,4 +1,4 @@
-# ChatMe Documentation
+# ChatMe - A Group Chat Application
 
 ChatMe is a simple and user-friendly chat application built using **React (Vite)** and **Firebase**.
 
