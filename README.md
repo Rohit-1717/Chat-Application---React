@@ -26,17 +26,21 @@ ChatMe is a simple and user-friendly chat application built using **React (Vite)
 ### **Login Page / Landing Page**
 
 #### **Mobile View**
-![Login Page - Mobile View](./screenshots/login-mobile-view.png)
+![Login Mobile](https://github.com/user-attachments/assets/e5ff6e93-234a-4cdf-bfbc-557511708793)
+
 
 #### **Desktop View**
-![Login Page - Desktop View](./screenshots/login-desktop-view.png)
+![Login_Desktop](https://github.com/user-attachments/assets/2c7a996a-f88b-484b-92c0-d91eab93f78d)
+
 
 ---
 
 ### **Chat Page**
 
 #### **Mobile View**
-![Chat Page - Mobile View](./screenshots/chat-mobile-view.png)
+![Mobile View ChatPage](https://github.com/user-attachments/assets/e161adeb-e499-4ff6-a5bd-853230bd3827)
+
 
 #### **Desktop View**
-![Chat Page - Desktop View](./screenshots/chat-desktop-view.png)
+![ChatPage_desktop](https://github.com/user-attachments/assets/24c68967-df74-4ee4-b65b-8c9c517c5c5e)
+
